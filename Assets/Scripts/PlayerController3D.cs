@@ -4,21 +4,52 @@ using UnityEngine;
 
 public class PlayerController3D : MonoBehaviour
 {
-    public float moveSpeed;
+    public float speed = 12f;
+    private Rigidbody rb;
+    //public Vector3 movement;
+    private Vector3 movement;
+
+    //public float fall = -0.1f;
+
+    
 
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
 
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        // transform.Translate(x, y, z)
+        transform.Translate(speed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, speed * Input.GetAxis("Vertical") * Time.deltaTime);
+
+       
+        GetComponent<Rigidbody>().AddForce(Physics.gravity*2, ForceMode.Acceleration);
+        
+        
+        
+        
+        /////movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        /*
+        float hAxis = Input.GetAxis("Horizontal");
+        float vAxis = Input.GetAxis("Vertical");
+
+        movement = new Vector3(hAxis, fall, vAxis) * speed * Time.deltaTime;
+
+
+
+
+        rb.velocity = (movement * speed);
+        */
+
 
     }
+
+
+
+
 }
