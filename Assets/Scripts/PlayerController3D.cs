@@ -9,16 +9,25 @@ public class PlayerController3D : MonoBehaviour
     //public Vector3 movement;
     private Vector3 movement;
 
-    //public float fall = -0.1f;
 
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+
+    }
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        
     }
 
     void FixedUpdate()
@@ -27,7 +36,7 @@ public class PlayerController3D : MonoBehaviour
         transform.Translate(speed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, speed * Input.GetAxis("Vertical") * Time.deltaTime);
 
        
-        GetComponent<Rigidbody>().AddForce(Physics.gravity*2, ForceMode.Acceleration);
+        GetComponent<Rigidbody>().AddForce(Physics.gravity, ForceMode.Acceleration);
         
         
         
