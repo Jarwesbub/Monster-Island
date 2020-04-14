@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+   
 
 
     private void Start()
@@ -25,7 +26,8 @@ void OnTriggerEnter(Collider other)
                     // item can be added to inventory
 
                     
-
+                    
+                    //Instantiate(itemButton, new Vector3(0, 0, 0), Quaternion.identity);
                     Instantiate(itemButton, inventory.slots[i].transform, false);
 
                     inventory.isFull[i] = true;
