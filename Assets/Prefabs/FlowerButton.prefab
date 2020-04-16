@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6425496521929096868}
   - component: {fileID: 9011944187878119579}
   - component: {fileID: 5812479097855325214}
+  - component: {fileID: 1912922722230284219}
   m_Layer: 5
   m_Name: FlowerButton
   m_TagString: Untagged
@@ -117,3 +118,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1912922722230284219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488958256897238167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5ffa2a1793691448e86964f2f7249c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 1488958256897238167}

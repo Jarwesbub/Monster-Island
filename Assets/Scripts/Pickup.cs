@@ -19,28 +19,30 @@ void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
+            
+                
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    // item can be added to inventory
+                    if (inventory.isFull[i] == false)
+                    {
+                        // item can be added to inventory
 
-                    
-                    
-                    //Instantiate(itemButton, new Vector3(0, 0, 0), Quaternion.identity);
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
 
-                    inventory.isFull[i] = true;
 
-                    Destroy(gameObject);
-                    break;
+                        //Instantiate(itemButton, new Vector3(0, 0, 0), Quaternion.identity);
+                        Instantiate(itemButton, inventory.slots[i].transform, false);
+
+                        inventory.isFull[i] = true;
+
+                        Destroy(gameObject);
+                        break;
+
+
+                    }
 
 
                 }
-
-
-            }
-
+            
 
         }
 
