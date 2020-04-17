@@ -6,13 +6,14 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
-   
+
+    
 
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-
+        
     }
 
 void OnTriggerEnter(Collider other)

@@ -11,9 +11,14 @@ public class NPC1Controller : MonoBehaviour
     // Talk button
     public GameObject NPC1TalkButton;
     // Dialogue and continue button
+
+
+
     public GameObject NPC1DialogueBox;
 
     public GameObject DialogueManager;
+
+    public GameObject Heart;
 
 
     void Start()
@@ -27,6 +32,10 @@ public class NPC1Controller : MonoBehaviour
         NPC1TalkButton.SetActive(true);
         NPC1DialogueBox.SetActive(true);
         DialogueManager.SetActive(true);
+
+
+
+
 
     }
     void OnTriggerExit(Collider other)

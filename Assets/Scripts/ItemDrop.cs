@@ -5,17 +5,84 @@ using UnityEngine.UI;
 
 public class ItemDrop : MonoBehaviour
 {
-    //public Button myButton;
+    public GameObject WhatItem;
+
+
+  
+    
+
+    void Start()
+    {
+    
+    }
 
 
 
 
     public void DropItem()
     {
-        
-        Debug.Log("Painoit Nappia");
-        
+        //(GameObject.Find("Player").GetComponent<PlayerController3D>().PlayerColNPC1);
+
+        if ((GameObject.Find("Player").GetComponent<PlayerController3D>().PlayerColNPC1) == true)
+        {
+            //Debug.Log("NPC1");
+
+            if (WhatItem.name == ("FlowerButton"))
+            {
+                Debug.Log("No Flowers!");
+            }
+            
+            if (WhatItem.name == ("StarButton"))
+            {
+                Debug.Log("No Sea Stars!");
+            }
+
+        }
+        if ((GameObject.Find("Player").GetComponent<PlayerController3D>().PlayerColNPC2) == true)
+        {
+            //Debug.Log("NPC2");
+
+            if (WhatItem.name == ("FlowerButton"))
+            {
+
+                
+                Debug.Log("FLOWER THANKS!");
+                
+
+
+            }
+
+            if (WhatItem.name == ("StarButton"))
+            {
+                Debug.Log("No Sea Stars!");
+            }
+
+        }
+        if ((GameObject.Find("Player").GetComponent<PlayerController3D>().PlayerColNPC3) == true)
+        {
+            //Debug.Log("NPC3");
+
+            if (WhatItem.name == ("FlowerButton"))
+            {
+
+                Debug.Log("No Flowers!");
+            }
+
+            if (WhatItem.name == ("StarButton"))
+            {
+
+                Debug.Log("SEA STAR THANKS!");
+                //Heart.SetActive(true);
+            }
+
+        }
+
+
     }
+
+        
+
+    
     /*
     
     void OnEnable()
