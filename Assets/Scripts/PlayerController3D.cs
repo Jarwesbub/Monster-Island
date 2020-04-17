@@ -9,53 +9,17 @@ public class PlayerController3D : MonoBehaviour
     //public Vector3 movement;
     private Vector3 movement;
 
-    //This is for ItemDrop script to check player collision with NPC's 1-3
-    public bool PlayerColNPC1 = false;
-    public bool PlayerColNPC2 = false;
-    public bool PlayerColNPC3 = false;
 
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collider.gameObject.name == "NPC1")
-        {
-            PlayerColNPC1 = true;
-            
-        }
 
-        if (collider.gameObject.name == "NPC2")
-        {
-            PlayerColNPC2 = true;
-           
-        }
-
-        if (collider.gameObject.name == "NPC3")
-        {
-            PlayerColNPC3 = true;
-           
-        }
 
     }
 
-    private void OnTriggerExit(Collider collider)
+    private void OnTriggerExit(Collider other)
     {
-        if (collider.gameObject.name == "NPC1")
-        {
-            PlayerColNPC1 = false;
-            
-        }
 
-        if (collider.gameObject.name == "NPC2")
-        {
-            PlayerColNPC2 = false;
-            
-        }
-
-        if (collider.gameObject.name == "NPC3")
-        {
-            PlayerColNPC3 = false;
-            
-        }
 
     }
 
